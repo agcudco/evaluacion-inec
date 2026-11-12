@@ -1,0 +1,48 @@
+# PLANTILLA DE CONSTRUCCIÓN EN CLASE (NO ejecutar toda de una vez)
+# Abra este archivo en RStudio. Complete los TODO, ejecute por bloques y
+# utilice los scripts R/00 a R/08 únicamente como guía de revisión.
+
+# ETAPA 0 — localizar el proyecto
+# TODO: escriba el comando here::here() y compruebe la existencia del CSV.
+
+# ETAPA 1 — importar, perfilar y guardar la primera evidencia
+# TODO: importe data_raw/encuesta_socioeconomica_2026.csv como texto.
+# TODO: muestre nrow(), names(), count(zona) y la tabla de ausencias.
+# EVIDENCIA: 01_diagnostico_variables.csv y 01_datos.rds.
+
+# ETAPA 2 — diseñar alertas
+# TODO: escriba una condición lógica para edad inválida.
+# TODO: use crear_alerta() para guardar id_encuesta y valor observado.
+# EVIDENCIA: 02_alertas_variables.csv.
+
+# ETAPA 3 — validar integridad
+# TODO: cree un listado de claves id_persona duplicadas dentro de período.
+# TODO: utilice anti_join(personas, hogares, by = c('id_hogar','periodo_referencia')).
+# EVIDENCIA: 03_alertas_integridad.csv.
+
+# ETAPA 4 — proponer depuración
+# TODO: normalice etiquetas conocidas sin modificar el CSV original.
+# TODO: registre valor original, valor propuesto y estado PENDIENTE.
+# TODO: calcule media y mediana de ingresos numéricos no negativos.
+# EVIDENCIA: 04_bitacora_propuesta.csv.
+
+# ETAPA 5 — indicadores y resúmenes
+# TODO: defina numerador/denominador de completitud, validez y unicidad.
+# TODO: compare 2026-10 y 2026-11 con las mismas reglas.
+# EVIDENCIA: archivos resultados/tablas/05_*.csv.
+
+# ETAPA 6 — gráficos
+# TODO: construya un gráfico de barras con geom_col().
+# TODO: construya un histograma con geom_histogram().
+# TODO: use ggsave() para guardar un PNG que luego leerá Quarto.
+# EVIDENCIA: cinco PNG en resultados/figuras/.
+
+# ETAPA 7 — ENTREGABLE RDS
+# TODO: use saveRDS() para guardar listas de resultados, tablas y metadatos.
+# TODO: en una sesión limpia use readRDS() y compruebe names() y nrow().
+# EVIDENCIA: resultados/07_paquete_reporte.rds.
+
+# ETAPA 8 — HTML y WEB (pasos en Terminal de RStudio)
+# quarto render reportes/reporte_calidad.qmd --to html
+# quarto render web
+# EVIDENCIA: reportes/reporte_calidad.html y web/_site/index.html.

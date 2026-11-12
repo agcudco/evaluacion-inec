@@ -1,0 +1,52 @@
+# Hoja de trabajo del participante — Entregables E0 a E9
+
+**Nombre y apellido:** ____________________________  **Fecha:** ___________
+
+## Instrucciones de uso
+
+Trabaje con la guía `GUIA_TALLER_INTEGRADOR_PASO_A_PASO.md`. Complete una etapa por vez; no sobrescriba datos originales. Los CSV son **sintéticos y no representan información oficial del INEC**.
+
+- [ ] **E0 (1 p):** abrir `.Rproj` y comprobar `here::here()`; registrar la ruta de datos.
+- [ ] **E1 (2 p):** importar como texto, contar 2.400 registros y generar `01_diagnostico_variables.csv`.
+- [ ] **E2 (2 p):** probar V02, V04, V07 y V08; explicar tres incidencias de distinta clase.
+- [ ] **E3 (3 p):** ejecutar `anti_join()` y explicar una clave huérfana y un ID duplicado.
+- [ ] **E4 (2 p):** proponer una normalización trazable; comparar `mean()` y `median()`.
+- [ ] **E5 (3 p):** producir indicadores y documentar numeradores, denominadores y períodos.
+- [ ] **E6 (2 p):** generar y abrir las cinco visualizaciones PNG; comentar una de ellas.
+- [ ] **E7 (2 p):** guardar **`07_paquete_reporte.rds`**, cerrar R, volver a abrir, comprobar `readRDS()`.
+- [ ] **E8 (2 p):** renderizar el informe HTML desde `reportes/reporte_calidad.qmd`.
+- [ ] **E9 (1 p):** renderizar el sitio web y abrir `web/_site/index.html`.
+
+## Preguntas breves para responder por escrito
+
+**1. ¿Qué variable presenta más ausencias?**
+
+> Respuesta:
+
+**2. ¿Qué regla produjo más alertas? ¿Representan personas distintas?**
+
+> Respuesta:
+
+**3. ¿Por qué la pobreza de este ejercicio no es una estimación oficial?**
+
+> Respuesta:
+
+**4. ¿Qué diferencia hay entre un RDS y un CSV?**
+
+> Respuesta:
+
+**5. ¿Qué ocurriría si modifica el CSV original después de crear el RDS?**
+
+> Respuesta:
+
+## Carpeta final a entregar
+
+```text
+entrega_apellidos/
+├── evidencias/             # Capturas breves y respuestas
+├── resultados/             # CSV + PNG + RDS
+├── reportes/               # HTML + QMD
+└── web/_site/              # Sitio estático generado por Quarto
+```
+
+Nota: entregar también los scripts `.R` utilizados.
